@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  /* System-aware default */
+  :root {
+    color-scheme: light dark;
+  }
+
+  /* Base element styles */
+  html, body {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Cards */
+  .card {
+    @apply bg-white dark:bg-gray-800;
+    @apply text-gray-800 dark:text-gray-200;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply rounded-lg shadow-sm overflow-hidden;
+    @apply transition-all duration-300;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-indigo-600 dark:bg-indigo-500 text-white;
+    @apply px-4 py-2 rounded-md font-medium;
+    @apply hover:bg-indigo-700 dark:hover:bg-indigo-600;
+    @apply transition-colors duration-200;
+  }
+
+  .mobile-menu {
+    @apply transform transition-all duration-300 ease-in-out;
+  }
+  
+  .mobile-menu-enter {
+    @apply opacity-0 translate-y-[-20px];
+  }
+  
+  .mobile-menu-enter-active {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .mobile-menu-exit {
+    @apply opacity-100;
+  }
+  
+  .mobile-menu-exit-active {
+    @apply opacity-0 translate-y-[-20px];
+  }
+
+}
+
+@layer utilities {
+  /* Safe area padding */
+  .safe-padding {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

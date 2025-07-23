@@ -77,7 +77,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg z-40 pt-20 pb-6 px-4">
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg z-40 pt-6 pb-6 px-4">
           <div className="flex flex-col gap-4">
             <Link
               to="/"
